@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta(charset="utf-8")
+    %title Haras du Thil
+    = stylesheet_link_tag 'styles'
+  %body
+    %header{class: current_page.data.page}
+      %nav
+        = link_to 'Accueil', '/'
+        = link_to 'Les installations', '/les-installations'
+        = link_to "Lélevage", '/l-elevage'
+        = link_to 'Les chevaux au repos', '/les-chevaux-au-repos'
+        = link_to 'Les chevaux en retraite', '/les-chevaux-en-retraite'
+        = link_to 'Nos prestations', '/nos-prestations'
+        = link_to 'Tarifs', '/tarifs'
+        = link_to 'Contact', '/contact'
+    #separateur
+    %article
+      - if current_page.data.images
+        #vignettes
+          - current_page.data.images.each do |image|
+            .photo
+              .image= image_tag image.url
+              .commentaire= image.comment
+      = yield
+    = partial 'analytics'

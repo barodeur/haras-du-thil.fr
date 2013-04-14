@@ -1,0 +1,60 @@
+html
+  font: 16px Georgia, Times, "Times New Roman", Serif
+  background: #DDD
+
+body
+  width: 800px
+  margin: auto
+  border-right: 1px solid #333
+  border-left: 1px solid #333
+  background: white
+
+$pages: accueil, les-installations, l-elevage, les-chevaux-au-repos, les-chevaux-en-retraite, nos-prestations, tarifs, contact
+
+header
+  background-repeat: no-repeat
+  background-position: right top
+  height: 250px
+  background: white
+  @each $page in $pages
+    &.#{$page}
+      background: image_url("headers/#{$page}.jpg")
+      background-repeat: no-repeat
+      background-position: right top
+
+nav
+  width: 216px
+  font: bold .8em Arial
+  height: 250px
+  a
+    display: block
+    margin: 0px 3px 3px 3px
+    padding-left: 10px
+    line-height: 25px
+    height: 25px
+    background: #ebfa96
+    border-left: 3px solid #3e96f8
+#separateur
+  background: image_url('separateur.jpg')
+  height: 25px
+  margin: 0px
+
+article
+  padding: 20px
+  text-align: justify
+  line-height: 1.4em
+h1
+  margin: 5px 0px 5px 10px
+  font: bold italic 1.8em Georgia, Times, "Times New Roman", Serif
+
+#vignettes
+  height: 170px
+  .photo
+    width: 240px
+    text-align: center
+    float: left
+
+table
+  width: 760px
+td
+  padding: 0px 0px 0px 30px
