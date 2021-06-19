@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'middleman', '~>3.0.13'
-gem 'middleman-deploy'
+gem 'middleman', '~> 4.4.0'
 gem 'middleman-livereload'
 gem 'compass'
 gem 'susy'

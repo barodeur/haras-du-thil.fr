@@ -1,2 +1,0 @@
-#! /usr/bin/env sh
-bundle exec middleman build && bundle exec middleman deploy

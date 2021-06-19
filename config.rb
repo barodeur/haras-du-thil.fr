@@ -9,7 +9,3 @@ activate :livereload
 configure :build do
   activate :minify_css
 end
-
-activate :deploy do |deploy|
-  deploy.method = :git
-end
